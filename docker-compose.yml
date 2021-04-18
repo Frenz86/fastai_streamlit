@@ -7,7 +7,7 @@ services:
       - 8008:8000
     networks:
       - deploy_network
-    container_name: fastapi
+    container_name: segmentation-fastapi_backend
 
   streamlit:
     build: streamlit/
@@ -17,7 +17,7 @@ services:
         - 8507:8501
     networks:
       - deploy_network
-    container_name: streamlit
+    container_name: segmentation-streamlit_frontend
 
 networks:
   deploy_network:
